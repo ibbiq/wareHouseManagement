@@ -31,7 +31,7 @@
             <img src="Images/trackOrderCus.png" class="borderedbox" alt="Track Orders" style="width:180px;height:180px;float:left" />
             <h6>Track Your Orders</h6>
         </a></li>
-        <li><a href="#">
+        <li><a href="CreateNewOrder.aspx">CreateNewOrder.aspx</a>
             <h6>Create A New Order</h6>
             <img src="Images/NewOrder.png" class="borderedbox" alt="NewOrder" style="width:180px;height:180px;" />
         </a></li>

@@ -123,5 +123,43 @@ namespace labPractice.DAL
             con.Close();
         }
 
+        public int getOrderId()
+        {
+            int id = 0;
+            SqlConnection con = new SqlConnection(connString);
+            con.Open();
+
+            SqlCommand com = new SqlCommand("getOrderId", con);
+            com.CommandType = CommandType.StoredProcedure;
+
+            com.Parameters.Add("@id", SqlDbType.Int).Direction = ParameterDirection.Output;
+            com.ExecuteNonQuery();
+            id = Convert.ToInt32(com.Parameters["@id"].Value);
+            con.Close();
+            return id;
+        }
+
+        public void checkout(string userName, int price)
+        {
+            SqlConnection con = new SqlConnection(connString);
+            con.Open();
+
+            SqlCommand com = new SqlCommand("addOrder", con);
+            com.CommandType = CommandType.StoredProcedure;
+
+            int orderId = getOrderId();
+            orderId++;
+
+            SqlParameter p1 = new SqlParameter("user", userName);
+            SqlParameter p2 = new SqlParameter("price", price);
+            SqlParameter p3 = new SqlParameter("id", orderId);
+            com.Parameters.Add(p3);
+            com.Parameters.Add(p2);
+            com.Parameters.Add(p1);
+            com.ExecuteNonQuery();
+
+            con.Close();
+        }
+
     }
 }

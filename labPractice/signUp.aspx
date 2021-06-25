@@ -20,16 +20,18 @@
 		</span>
 	</div>
 
+    
 <div class="rounded">
     <main class="container clear">
         <div class="one_quarter first">
             <h4>Already Have an Account?</h4>
-            <p>Sign up as a customer today!</p>
-            <img src="Images/login.png" style="width:128px;height:128px;"/>
+            <p>Login to your Account</p>
+            <a href="cusSignIn.aspx"><img src="Images/login.png" style="width:128px;height:128px;"/>
+            </a>
         </div>
         <div class="one_half">
             <form runat="server">
-                <asp:TextBox ID="txtuser" Text="UserName"  runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtuser" Text="UserName" runat="server"></asp:TextBox>
                 <asp:TextBox ID="txtpass" Text="Password" runat="server"></asp:TextBox>
                 <asp:Button Text="Sign Up" runat="server" Width="306px" OnClick="Unnamed1_Click" />
                 <asp:Label ID="Label1" runat="server" Visible="false" Text=""></asp:Label>
@@ -39,7 +41,7 @@
 </div>
 
 </div>
-    
+
 
 
 </div>

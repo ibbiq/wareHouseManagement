@@ -205,6 +205,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="CreateNewOrder.aspx" />
     <Content Include="cusSignIn.aspx" />
     <Content Include="customerDashboard.aspx" />
     <Content Include="Features.aspx" />
@@ -286,7 +287,9 @@
     <Content Include="style.css" />
     <Content Include="signin.css" />
     <Content Include="ViewSwitcher.ascx" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Bundle.config" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
@@ -437,6 +440,13 @@
     </Compile>
     <Compile Include="contactUs.aspx.designer.cs">
       <DependentUpon>contactUs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreateNewOrder.aspx.cs">
+      <DependentUpon>CreateNewOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreateNewOrder.aspx.designer.cs">
+      <DependentUpon>CreateNewOrder.aspx</DependentUpon>
     </Compile>
     <Compile Include="cusSignIn.aspx.cs">
       <DependentUpon>cusSignIn.aspx</DependentUpon>
